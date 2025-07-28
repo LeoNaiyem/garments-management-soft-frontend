@@ -1,0 +1,38 @@
+tailwind.config.js file structure:
+
+export default {
+  content: [],       // Required: files to scan for Tailwind classes
+  theme: {           // Theme customization
+    extend: {        // Only use `extend` to avoid overwriting core styles
+      colors: {},
+      fontFamily: {},
+      spacing: {},
+      borderRadius: {},
+      // ... more theme options
+    }
+  },
+  darkMode: 'class', // or 'media' (outside of theme)
+  plugins: [],       // Tailwind plugins
+  variants: {},      // (rarely needed, advanced use)
+  corePlugins: {},   // Enable/disable core utilities
+  safelist: [],      // Keep certain classes even if unused in content
+  presets: [],       // Inherit from another Tailwind config
+}
+
+
+tailwind.config.js file example
+
+extend: {
+  screens: {
+    'xs': '475px',
+  },
+  animation: {
+    fadeIn: 'fadeIn 1s ease-in-out',
+  },
+  keyframes: {
+    fadeIn: {
+      '0%': { opacity: 0 },
+      '100%': { opacity: 1 },
+    }
+  }
+}
